@@ -16,11 +16,16 @@ export default function BlogList({
 }: BlogListProps) {
   return (
     <div className="grid grid-cols-3 md:grid-cols-8 gap-4">
-      <header className="col-span-1 md:col-span-2 prose prose-char prose-headings:mb-0 lg:prose-xl flex h-full flex-col items-center lg:sticky  lg:items-start lg:text-left">
+      <header
+        className="col-span-1 md:col-span-2 prose prose-char
+        prose-headings:mb-0 lg:prose-xl flex h-full flex-col items-center
+        lg:sticky  lg:items-start lg:text-left"
+      >
         <h1>{title}</h1>
         <p>{description}</p>
         <Separator />
       </header>
+
       <div className="col-span-2 md:col-span-6 grid grid-cols-2 gap-4 auto-rows-fr">
         {postList.map((post, index) => {
           return (
