@@ -5,7 +5,7 @@
   "scripts": {
     "predev": "tsx scripts/createMDXMetadata.ts",
     "dev": "next dev",
-    "prebuild": "node scripts/createMDXMetadata.ts",
+    "prebuild": "tsx scripts/createMDXMetadata.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
