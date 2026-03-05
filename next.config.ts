@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
-
-import codeTitle from "remark-code-title";
+import remarkFrontmatter from "remark-frontmatter";
+import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 
 const nextConfig: NextConfig = {
   // sassOptions: {
@@ -16,11 +16,7 @@ const nextConfig: NextConfig = {
 const withMDX = createMDX({
   //Add plugins here
   options: {
-    remarkPlugins: [
-      ["remark-frontmatter", { strict: true, throwOnError: true }],
-      ["remark-mdx-frontmatter", { strict: true, throwOnError: true }],
-      ["remark-code-title", { strict: true, throwOnError: true }],
-    ],
+    remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
     rehypePlugins: [],
   },
 });
